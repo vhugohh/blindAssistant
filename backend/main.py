@@ -89,11 +89,12 @@ Prioriza seguridad.
 def ocr(data: ImageRequest):
 
     prompt = """
-Lee todo el texto visible.
+Lee todo el texto visible, evitando texto de fondo.
 
 Incluye etiquetas.
 
 Máximo 50 palabras.
+
 """
 
     texto = analizar(
