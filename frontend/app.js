@@ -194,11 +194,11 @@ document.addEventListener(
 		if(key==="e"){
 
             hablar(
-                "Modo Clima"
+                "Modo descripción de alimentos"
             );
 
             await enviar(
-                "weather"
+                "food"
             );
         }
 		
