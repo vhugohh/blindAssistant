@@ -56,18 +56,15 @@ def analizar(imagen_b64, prompt):
 def environment(data: ImageRequest):
 
     prompt = """
-Actúa como guía para una persona ciega.
-
+Actúa como guía para una persona ciega. Brinda instrucciones precisas para caminar sin tropezar o chocar.
 Describe:
-
 - obstáculos
 - personas
 - puertas
 - escaleras
 - objetos cercanos
 
-Máximo 25 palabras.
-
+Máximo 40 palabras.
 Prioriza seguridad.
 """
 
@@ -156,15 +153,15 @@ Usa máximo 50 palabras
     }
 
 # =====================================================
-# CLIMA
+# RECONOCER ALIMENTOS
 # =====================================================
 
-@app.post("/weather")
+@app.post("/food")
 
-def weather(data: ImageRequest):
+def food(data: ImageRequest):
 
     prompt = """
-Indica la fecha y hora. Menciona las condiciones meteorológicas actuales y el pronóstico del clima.
+Describe el platillo mencionando su nombre e ingredientes. Usa máximo 40 palabras para describirlo.
 """
 
     texto = analizar(
